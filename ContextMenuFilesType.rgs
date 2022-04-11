@@ -1,0 +1,19 @@
+HKLM
+{
+	Software
+	{
+		Classes
+		{
+			*
+			{
+				shellex
+				{
+					ContextMenuHandlers
+					{
+						'NV License Manager' = s '{cfc2416d-d35f-487e-b35b-33c32062681b}'
+					}
+				}
+			}
+		}
+	}
+}

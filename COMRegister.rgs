@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {cfc2416d-d35f-487e-b35b-33c32062681b} = s 'Code License Helper class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{13a585ae-6f9c-4fc8-a2fa-c4b7001a52f4}'
+			Version = s '1.0'
+		}
+	}
+}

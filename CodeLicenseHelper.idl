@@ -1,0 +1,36 @@
+﻿// CodeLicenseHelper.idl : IDL source for CodeLicenseHelper
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CodeLicenseHelper.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(b3dec30f-866d-4b0d-a819-c559bfd276e8),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ICM : IDispatch
+{
+};
+[
+	uuid(13a585ae-6f9c-4fc8-a2fa-c4b7001a52f4),
+	version(1.0),
+]
+library CodeLicenseHelperLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(cfc2416d-d35f-487e-b35b-33c32062681b)
+	]
+	coclass CCM
+	{
+		[default] interface ICM;
+	};
+};
+
+import "shobjidl.idl";
