@@ -288,11 +288,18 @@
     <Midl Include="CodeLicenseHelper.idl" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="alian.ico" />
-    <Image Include="assets\copyright.ico" />
-    <Image Include="assets\hammer.ico" />
-    <Image Include="assets\magnifying_glass.ico" />
-    <Image Include="assets\question_mark.ico" />
+    <Image Include="assets\copyright.ico">
+      <DeploymentContent>false</DeploymentContent>
+    </Image>
+    <Image Include="assets\hammer.ico">
+      <DeploymentContent>false</DeploymentContent>
+    </Image>
+    <Image Include="assets\magnifying_glass.ico">
+      <DeploymentContent>false</DeploymentContent>
+    </Image>
+    <Image Include="assets\question_mark.ico">
+      <DeploymentContent>false</DeploymentContent>
+    </Image>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

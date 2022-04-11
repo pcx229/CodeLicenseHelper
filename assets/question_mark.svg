@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64"
+   height="64"
+   viewBox="0 0 16.933334 16.933334"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="question_mark.svg"
+   inkscape:export-filename="C:\Users\אלי\source\repos\CodeLicenseHelper\assets\question_mark.png"
+   inkscape:export-xdpi="48.000004"
+   inkscape:export-ydpi="48.000004">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="82.75783"
+     inkscape:cy="24.768214"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-21.735859,-63.758592)">
+    <g
+       aria-label="?"
+       style="font-style:normal;font-weight:normal;font-size:22.41777802px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#020000;stroke-width:0.30197195;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="text816"
+       transform="matrix(1.0872075,0,0,1.0264451,-2.3527957,-2.1057636)">
+      <path
+         d="m 28.588382,73.552592 q -0.05473,-0.218924 -0.05473,-0.503525 0,-0.503524 0.2846,-0.941371 0.295547,-0.437848 0.963264,-1.039887 l 1.007049,-0.897587 q 0.437847,-0.405009 0.667717,-0.678663 0.240816,-0.284601 0.361224,-0.623933 0.120408,-0.339331 0.120408,-0.820963 0,-0.897587 -0.492578,-1.368273 -0.492578,-0.470686 -1.444896,-0.470686 -0.514471,0 -0.842856,0.131354 -0.317439,0.120408 -0.634878,0.405009 l -0.328386,1.302596 -1.039887,-0.06568 -0.175139,-2.17829 q 0.667717,-0.350278 1.587196,-0.60204 0.919479,-0.251762 1.882743,-0.251762 1.57625,0 2.419106,0.766232 0.853802,0.766233 0.853802,2.331537 0,1.138402 -0.415955,1.915581 -0.415954,0.777179 -1.061779,1.335434 l -1.247865,1.072726 q -0.459739,0.394063 -0.667717,0.667717 -0.207977,0.273655 -0.394062,0.700556 l -0.02189,1.543411 -0.919479,0.317439 z m 1.039887,6.07513 q -0.437847,-0.295547 -0.853802,-0.700556 -0.415955,-0.415955 -0.722448,-0.864748 0.306493,-0.437847 0.722448,-0.842856 0.415955,-0.415955 0.853802,-0.722448 0.437847,0.306493 0.842856,0.722448 0.415955,0.405009 0.722448,0.842856 -0.306493,0.437847 -0.722448,0.853802 -0.415955,0.415955 -0.842856,0.711502 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Hadassah Friedlaender';-inkscape-font-specification:'Hadassah Friedlaender';fill:#ffffff;fill-opacity:1;stroke:#020000;stroke-width:0.30197195;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path814"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>
