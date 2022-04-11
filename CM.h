@@ -53,7 +53,11 @@ public:
 			DeleteObject(i.second);
 		}
 
-		for (auto const& i : fileTypes) {
+		for (auto const& i : allowedFilesNames) {
+			SysFreeString(i);
+		}
+
+		for (auto const& i : allowedFilesExtensions) {
 			SysFreeString(i);
 		}
 
@@ -104,7 +108,7 @@ private:
 
 	static const int MAX_STRING_LENGTH = 256;
 	static const int MAX_COMMAND_LENGTH = MAX_PATH + MAX_PATH + 2048;
-	const LPWSTR SETTING_IN_USER_PROFILE_FILE_PATH = L"code-license.config.xml";
+	LPCWSTR SETTING_IN_USER_PROFILE_FILE_PATH = L"code-license.config.xml";
 
 	std::map<UINT, LPWSTR> stringsW;
 	std::map<UINT, LPSTR> stringsA;
@@ -125,8 +129,10 @@ private:
 					*checkTypeCommand,
 						*repairTypeCommand;
 
-	std::vector<LPWSTR> fileTypes;
+	std::vector<LPWSTR> allowedFilesExtensions,
+							allowedFilesNames;
 	bool filterTypes;
+	bool pathIsAllowd;
 
 	bool loadedSettings;
 

@@ -40,17 +40,18 @@
 	<Repair-Command> command </Repair-Command>
 	<!-- Types of files extension that have license
 				will check only thows files, unless this list is empty
-				otherwise all files will be
-				example: 
+				otherwise all files will be checked.
+				example:
 				<Files>
-					<Type> c </Type>
-					<Type> h </Type>
-					<Type> cpp </Type>
+					<Extension> c </Extension>
+					<Extension> h </Extension>
+					<Extension> cpp </Extension>
+					<Name> makefile </Name>
 				</Files> -->
 	<Files>
-		<Type>c</Type>
-		<Type>h</Type>
-		<Type>cpp</Type>
-		<Type>hpp</Type>
+		<Extension> c </Extension>
+		<Extension> h </Extension>
+		<Extension> cpp </Extension>
+		<Name> makefile </Name>
 	</Files>
 </Settings>

@@ -23,3 +23,6 @@ HBITMAP LoadMenuIconAsBitmap(HINSTANCE hInst, HICON icon);
 HRESULT exec(LPWSTR command, LPWSTR output, UINT maxOutputSize, DWORD* ec, DWORD timeout);
 
 HRESULT wsubstr(LPCWSTR str, LPCWSTR target, LPCWSTR replacement, LPWSTR out);
+
+LPCWSTR fileExtension(LPCWSTR path);
+LPCWSTR fileName(LPCWSTR path);

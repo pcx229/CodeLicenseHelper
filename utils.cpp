@@ -2,6 +2,40 @@
 #include "pch.h"
 #include "utils.h"
 
+LPCWSTR fileName(LPCWSTR path)
+{
+    LPCWSTR last_dot = NULL;
+    for (int i = 0; i < MAX_PATH; i++)
+    {
+        if (path[i] == L'\0')
+        {
+            break;
+        }
+        if (path[i] == *L"\\")
+        {
+            last_dot = path + i + 1;
+        }
+    }
+    return last_dot;
+}
+
+LPCWSTR fileExtension(LPCWSTR path)
+{
+    LPCWSTR last_dot = NULL;
+    for (int i = 0; i < MAX_PATH; i++)
+    {
+        if (path[i] == L'\0')
+        {
+            break;
+        }
+        if (path[i] == *L".")
+        {
+            last_dot = path + i + 1;
+        }
+    }
+    return last_dot;
+}
+
 HRESULT wsubstr(LPCWSTR str, LPCWSTR target, LPCWSTR replacement, LPWSTR out)
 {
     int varSize = lstrlenW(target);

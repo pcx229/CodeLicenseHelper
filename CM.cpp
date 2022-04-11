@@ -6,7 +6,7 @@
 
 HRESULT STDMETHODCALLTYPE CCM::QueryContextMenu(HMENU hmenu, UINT indexMenu, UINT idCmdFirst, UINT idCmdLast, UINT uFlags)
 {
-    if (!(CMF_DEFAULTONLY & uFlags) && loadedSettings)
+    if (!(CMF_DEFAULTONLY & uFlags) && loadedSettings && pathIsAllowd)
     {
         /*
         menu:
@@ -201,6 +201,37 @@ HRESULT CCM::Initialize(PCIDLIST_ABSOLUTE pidlFolder, IDataObject* lpdobj, HKEY 
 
     DragQueryFile(reinterpret_cast<HDROP>(medium.hGlobal), 0, path, MAX_PATH);
 
+	if (filterTypes)
+	{
+		pathIsAllowd = false;
+		LPCWSTR name = fileName(path);
+		LPCWSTR extension = fileExtension(path);
+		if (extension != NULL)
+		{
+			for (const auto& t : allowedFilesExtensions)
+			{
+				if (wcsncmp(extension, t, MAX_PATH) == 0)
+				{
+					pathIsAllowd = true;
+				}
+			}
+		}
+		if (name != NULL)
+		{
+			for (const auto& t : allowedFilesNames)
+			{
+				if (wcsncmp(name, t, MAX_PATH) == 0)
+				{
+					pathIsAllowd = true;
+				}
+			}
+		}
+	}
+	else
+	{
+		pathIsAllowd = true;
+	}
+
     ReleaseStgMedium(&medium);
     return hr;
 }
@@ -328,25 +359,50 @@ void CCM::loadSettings() {
 				{
 					filterTypes = true;
 
-					CComPtr<IXMLDOMNodeList> ftValueList;
-					hr = iXMLDoc->selectNodes(CComBSTR(L"Settings/Files/Type"), &ftValueList);
+					CComPtr<IXMLDOMNodeList> fteValueList;
+					hr = iXMLDoc->selectNodes(CComBSTR(L"Settings/Files/Extension"), &fteValueList);
 					if (hr == S_OK)
 					{
 						long cValues = 0;
-						hr = ftValueList->get_length(&cValues);
+						hr = fteValueList->get_length(&cValues);
 						if (SUCCEEDED(hr))
 						{
 							for (long i = 0; i < cValues; i++)
 							{
 								CComPtr<IXMLDOMNode> lValue;
-								hr = ftValueList->get_item(i, &lValue);
+								hr = fteValueList->get_item(i, &lValue);
 								if (SUCCEEDED(hr))
 								{
 									CComBSTR name;
 									hr = lValue->get_text(&name);
 									if (SUCCEEDED(hr))
 									{
-										fileTypes.push_back((LPWSTR)name.Copy());
+										allowedFilesExtensions.push_back((LPWSTR)name.Copy());
+									}
+								}
+							}
+						}
+					}
+
+					CComPtr<IXMLDOMNodeList> ftnValueList;
+					hr = iXMLDoc->selectNodes(CComBSTR(L"Settings/Files/Name"), &ftnValueList);
+					if (hr == S_OK)
+					{
+						long cValues = 0;
+						hr = ftnValueList->get_length(&cValues);
+						if (SUCCEEDED(hr))
+						{
+							for (long i = 0; i < cValues; i++)
+							{
+								CComPtr<IXMLDOMNode> lValue;
+								hr = ftnValueList->get_item(i, &lValue);
+								if (SUCCEEDED(hr))
+								{
+									CComBSTR name;
+									hr = lValue->get_text(&name);
+									if (SUCCEEDED(hr))
+									{
+										allowedFilesNames.push_back((LPWSTR)name.Copy());
 									}
 								}
 							}
